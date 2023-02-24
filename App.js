@@ -1,13 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { Text, View } from 'react-native';
+import Harry from './src/screens/Harry'
+
 
 export default function App() {
   return (
-    <View className="bg-green-400">
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Harry/>
   );
 }
 
