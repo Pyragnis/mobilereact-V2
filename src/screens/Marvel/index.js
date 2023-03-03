@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Image, TextInput, StyleSheet } from 'react-native';
 
-const LoginScreen = () => {
+const index = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,7 +12,7 @@ const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./marvel_logo.png')}
+        source={require('./../../../public/marvel_logo.png')}
         style={styles.logo}
       />
       <View style={styles.inputContainer}>
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default index;

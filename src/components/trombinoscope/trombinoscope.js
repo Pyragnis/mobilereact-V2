@@ -10,11 +10,11 @@ const Trombinoscope = () => {
       .then(response => {
         setCharacters(response.data);
         console.log(response.data)
-        console.log(characters);
+      
       })
       .catch(error => {
         console.log(error);
-        console.log(characters);
+        
       });
   }, []);
 

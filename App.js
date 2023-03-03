@@ -5,7 +5,7 @@ import Home from './src/screens/home'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View,ScrollView,Button } from 'react-native';
-import Marvel from './src/screens/Marvel'
+import Marvel from './src/screens/Marvel';
 
 
 
