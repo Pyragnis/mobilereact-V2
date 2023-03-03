@@ -5,7 +5,8 @@ import Home from './src/screens/home'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View,ScrollView,Button } from 'react-native';
-import Marvel from './src/screens/Marvel';
+import COMarvel from './src/screens/COMarvel';
+import MarvelCara from './src/screens/MarvelCara';
 
 
 
@@ -39,7 +40,14 @@ export default function App() {
   function Marvel() {
     return (
       <ScrollView>
-        <Marvel/>
+        <COMarvel/>
+      </ScrollView>
+    );
+  }
+  function MarvelCara() {
+    return (
+      <ScrollView>
+        <MarvelCara/>
       </ScrollView>
     );
   }
@@ -50,6 +58,7 @@ export default function App() {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Harry" component={HarryList} />
       <Stack.Screen name="Marvel" component={Marvel} />
+      <Stack.Screen name="MarvelCara" component={MarvelCara} />
     </Stack.Navigator>
   </NavigationContainer>
   );

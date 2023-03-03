@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { View, Image, TextInput, StyleSheet } from 'react-native';
+import { View, Image, TextInput, StyleSheet,TouchableOpacity,Text } from 'react-native';
+import MarvelCara from '../MarvelCara';
+import { useNavigation } from '@react-navigation/native';
 
 const index = () => {
+  const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  
+
   const handleLogin = () => {
     // Gérer l'authentification de l'utilisateur
+    navigation.navigate('MarvelCara');
   }
 
   return (
