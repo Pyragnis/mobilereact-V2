@@ -1,10 +1,16 @@
 import React from 'react'
-import { Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';    
+import { Text, View,ScrollView } from 'react-native';
+import { StatusBar } from 'expo-status-bar';  
+import Header from '../../components/Header'; 
+import Trombinoscope from '../../components/trombinoscope/trombinoscope';
+
 
 function index() {
   return (
-    <Text> test </Text>
+    <ScrollView style={{ flex: 1 }}>
+      <Header title="harry pot de fleur "/>
+      <Trombinoscope />
+    </ScrollView>
   )
 }
 
