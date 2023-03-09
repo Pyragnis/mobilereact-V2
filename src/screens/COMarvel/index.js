@@ -5,14 +5,20 @@ import { useNavigation } from '@react-navigation/native';
 
 const index = () => {
   const navigation = useNavigation();
-  const [email, setEmail] = useState('');
+  const [UserName, setUserName] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   
 
   const handleLogin = () => {
     // Gérer l'authentification de l'utilisateur
-    navigation.navigate('MarvelCara');
+    if (!UserName || !password || UserName.length < 5 || password.length < 8) {
+      setError('Formulaire non valide');
+    } else {
+      navigation.navigate('MarvelCara');
+    }
+    
   }
 
   return (
@@ -24,9 +30,9 @@ const index = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Email"
-          onChangeText={setEmail}
-          value={email}
+          placeholder="UserName"
+          onChangeText={setUserName}
+          value={UserName}
         />
         <TextInput
           style={styles.input}
@@ -35,6 +41,7 @@ const index = () => {
           value={password}
           secureTextEntry
         />
+        {error ? <Text style={styles.error}>{error}</Text> : null}
       </View>
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Se connecter</Text>

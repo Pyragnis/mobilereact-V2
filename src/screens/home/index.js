@@ -13,6 +13,14 @@ function index() {
         title="Go to trombinoscope"
         onPress={() => navigation.navigate('Harry')}
       />
+      <Button
+          title="go to harry list"
+          onPress={() => navigation.navigate('Harry')}
+      />
+      <Button
+          title="go to Marvel login"
+          onPress={() => navigation.navigate('Marvel')}
+      />
     </ScrollView>
   )
 }

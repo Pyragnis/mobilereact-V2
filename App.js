@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View,ScrollView,Button } from 'react-native';
 import COMarvel from './src/screens/COMarvel';
-import MarvelCara from './src/screens/MarvelCara';
+import MarvelCAra from './src/screens/MarvelCara';
 
 
 
@@ -47,7 +47,7 @@ export default function App() {
   function MarvelCara() {
     return (
       <ScrollView>
-        <MarvelCara/>
+        <MarvelCAra/>
       </ScrollView>
     );
   }

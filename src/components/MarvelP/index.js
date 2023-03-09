@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import axios from 'axios';
+import CryptoJS from 'crypto-js';
+
+
 
 const Trombinoscope = () => {
   const [characters, setCharacters] = useState([]);
+  const publicKey = 'cb25a38ebaa9e077c373504fb7a4da29';
+  const privateKey = 'e33a0b034d4c5b9ebd3560cb8d776daddecb1001';
+  const timestamp = Date.now();
+  const hash = CryptoJS.MD5(timestamp + privateKey + publicKey).toString();
+  const url = `https://gateway.marvel.com/v1/public/characters?apikey=${publicKey}&hash=${hash}&ts=${timestamp}`;
 
   useEffect(() => {
-    axios.get('https://hp-api.onrender.com/api/characters')
+    axios.get(url)
       .then(response => {
         setCharacters(response.data);
-        
+        console.log(response.data)
       
       })
       .catch(error => {
