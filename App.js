@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View,ScrollView,Button } from 'react-native';
 import COMarvel from './src/screens/COMarvel';
 import MarvelCAra from './src/screens/MarvelCara';
+import MarvelDetail from './src/screens/MarvelDetail'
+import Pokedex from './src/screens/Pokedex';
 
 
 
@@ -24,6 +26,10 @@ export default function App() {
         <Button
           title="go to Marvel login"
           onPress={() => navigation.navigate('Marvel')}
+        />
+        <Button
+          title="go to the project pokedex"
+          onPress={() => navigation.navigate('Pokedex')}
         />
       </View>
     );
@@ -51,6 +57,12 @@ export default function App() {
       </ScrollView>
     );
   }
+  function Pokedex() {
+    return (
+      <Pokedex/>
+    );
+  }
+
   
   return (
     <NavigationContainer>
@@ -59,6 +71,8 @@ export default function App() {
       <Stack.Screen name="Harry" component={HarryList} />
       <Stack.Screen name="Marvel" component={Marvel} />
       <Stack.Screen name="MarvelCara" component={MarvelCara} />
+      <Stack.Screen name="MarvelDetail" component={MarvelDetail} />
+      <Stack.Screen name="Pokedex" component={Pokedex} />
     </Stack.Navigator>
   </NavigationContainer>
   );

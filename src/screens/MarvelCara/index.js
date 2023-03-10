@@ -9,7 +9,6 @@ import MarvelP from '../../components/MarvelP'
 function index() {
   return (
     <ScrollView style={{ flex: 1 }}>
-      <Header title="Marvel"/>
       <MarvelP/>
     </ScrollView>
   )
